@@ -1,38 +1,453 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
     <title>OCW-MIT</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 69%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(213, 238, 243, 0.8);
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+
+    </style>
 </head>
+
 <body>
     <div class="wrap">
-        <nav>
-            <img class="img" src="/image/logo.png" alt="">
-            
+        <nav class="nav1">
+            <img class="img" src="images/logo.png" alt="">
             <label class="logo">MIT OpenCourseWare</label>
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact Cs</a></li>
-                <li><a href="#">Help us</a></li>
-                <li><a href="#">search tips</a></li>
-                
+                <li><a class="a" href="#">Home</a></li>
+                <li><a class="a" href="#">Contact Cs</a></li>
+                <li><a class="a" href="#">Help us</a></li>
+                <li><a class="a" href="#">search tips</a></li>
+
             </ul>
-        <!-- <nav>
-            <img class="img" src="/image/logo.png" alt="">
-            
-            <label class="logo">MIT OpenCourseWare</label>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">find courses</a></li>
-                <li><a href="#">for educators</a></li>
-                <li><a href="#">give now</a></li>
-                <input type="text">
-                
-            </ul>
-        </nav> -->
+
+
     </div>
+    <div class="wrap2">
+        <nav class="nav2">
+            <ul class="ul">
+
+                <!-- <li class="li"><a class="a" href="#">Home</a></li> -->
+                <!-- <li class="li"><a class="a" href="#">find courses</a></li> -->
+                <!-- <li class="li"><a class="a" href="#">for educators</a></li> -->
+                <!-- <li class="li"><a class="a" href="#">give now</a></li> -->
+                <div class="dropdown">
+                    <li class="li"><button class="a dropbtn">About</button></li>
+                    <div class="dropdown-content">
+                        <a href="https://ocw.mit.edu/about/">About MIT OpenCourseWare</a>
+                        <a href="https://ocw.mit.edu/about/site-statistics/">Site Statistics</a>
+                        <a href="https://ocw.mit.edu/about/ocw-stories/">OCW Stories</a>
+                        <a href="https://ocw.mit.edu/about/newsletter/">Newsletter</a>
+                        <a href="https://chalk-radio.simplecast.com/">Chalk Radio Podcast</a>
+                        <a href="https://www.ocw-openmatters.org/">Open Matters Blog</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <li class="li"><button class="a dropbtn">Find courses</button></li>
+                    <div class="dropdown-content">
+                        <a href="https://ocw.mit.edu/courses/new-courses/">New Courses</a>
+                        <a href="https://ocw.mit.edu/courses/most-visited-courses/">Most visited Courses</a>
+                        <a href="https://ocw.mit.edu/courses/ocw-scholar/">OCW Scholar Courses</a>
+                        <a href="https://ocw.mit.edu/courses/audio-video-courses/">Other Ways to Contribute</a>
+                        <a href="https://ocw.mit.edu/courses/online-textbooks/">Audio/Video Lectures</a>
+                        <a href="https://ocw.mit.edu/resources/">Online Textbooks</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <li class="li"><button class="a dropbtn">For educators</button></li>
+                    <div class="dropdown-content">
+                        <a href="https://ocw.mit.edu/educator/chalk-radio-podcast">Chalk Radio Podcast</a>
+                        <a href="https://ocw.mit.edu/educator/">OCW Educator Portal</a>
+                        <a href="https://ocw.mit.edu/courses/instructor-insights/">Instructor Insights by Department</a>
+                        <a href="https://openlearning.mit.edu/campus/digital-innovations/">Residential Digital Innovations</a>
+                        <a href="https://ocw.mit.edu/high-school/">OCW Highlights for High School</a>
+                        <a href="https://ocw.mit.edu/educator/additional-resources/">Additional Resources</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <li class="li"><button class="a dropbtn">Give now</button></li>
+                    <div class="dropdown-content">
+                        <a href="https://ocw.mit.edu/give/">Make a Donation</a>
+                        <a href="https://ocw.mit.edu/give/why-give/">Why Give?</a>
+                        <a href="https://ocw.mit.edu/give/our-supporters/">Our supporters</a>
+                        <a href="https://ocw.mit.edu/give/other-ways-to-contribute/">Other Ways to Contribute</a>
+                        <a href="https://ocw.mit.edu/support/">Become a Corporate Sponsor</a>
+                    </div>
+                </div>
+                <input Class="input" type="text" placeholder="search..">
+
+            </ul>
+        </nav>
+    </div>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src="images/psycology and economics.jpg" style="width:100%;height:500px;">
+            <div style="color:white;height:100px;margin-top: -250px;margin-left:80px;font-size: 30px;">
+                <p class="headline shade">
+                    <span style="font-size: .8em">
+                        Psychology and Economics
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="https://ocw.mit.edu/rotator_book_compressed.jpeg" style="width:100%;height:500px;">
+            <div style="color:white;height:100px;margin-top: -250px;margin-left:80px;font-size: 30px;">
+                <p class="headline shade">
+                    <span style="font-size: .8em">
+                        Celebrating 20 years of OCW
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="https://ocw.mit.edu/Chalk_Radio_Album_.png" style="width:100%;height:500px;">
+            <div style="color:white;height:100px;margin-top: -250px;margin-left:80px;font-size: 30px;">
+                <p class="headline shade">
+                    <span style="font-size: .8em">
+                        Chalk Radio Podcast
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="https://ocw.mit.edu/OLL.jpeg" style="width:100%;height:500px;">
+            <div style="height:100px;margin-top: -250px;margin-left:80px;font-size: 30px;">
+                <p class="headline shade">
+                    <span style="font-size: .8em;color: grey;">
+                        MIT Open Learning Library
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/micromasters.webp" style="width:100%;height:500px;">
+            <div style="color:white;height:100px;margin-top: -250px;margin-left:80px;font-size: 30px;">
+                <p class="headline shade">
+                    <span style="font-size: .8em">
+                        Micromasters Program in Data, Economics, and Development Policy
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/futureofmit.jpg" style="width:100%;height:500px;">
+            <div style="color:white;height:100px;margin-top: -250px;margin-left:80px;font-size: 30px;">
+                <p class="headline shade">
+                    <span style="font-size: .8em">
+                        Help Support the Future of MIT OpenCourseWare
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+
+    <br>
+
+    <!-- <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+    </div> -->
+    <h1 class="hii">FEATURED COURSES</h1>
+    <section class="main">
+        <div class="flip3D">
+            <div class="back">
+                <img class="img" src="./images/g1.jpg" alt="">
+                <p class="flipp">
+                    Race, Ethnicity, and American Politics
+                </p>
+            </div>
+            <div class="front">
+                <img class="img" src="./images/g2.jpeg" alt="">
+                <p class="flipp">Performance Engineering of Software Systems</p>
+
+            </div>
+        </div>
+        </div>
+        <div class="flip3D">
+            <div class="back">
+                <img class="img" src="./images/g3.jpg" alt="">
+                <p class="flipp">
+                    Shaping the Future of Work (15.662x)
+                </p>
+            </div>
+            <div class="front">
+                <img class="img" src="./images/g4.jpg" alt="">
+                <p class="flipp">Fundamentals of Biology</p>
+            </div>
+        </div>
+        <div class="flip3D">
+            <div class="back">
+                <img class="img" src="./images/g5.jpg" alt="">
+                <p class="flipp">
+                    The Ancient World: Rome
+                </p>
+            </div>
+            <div class="front">
+                <img class="img" src="./images/g6.jpg" alt="">
+                <p class="flipp">
+                    Introduction to Geology
+                </p>
+            </div>
+        </div>
+
+        <div class="flip3D">
+            <div class="back">
+                <img class="img" src="./images/g7.jpg" alt="">
+                <p class="flipp">
+                    Science Activism: Gender, Race, and Power
+                </p>
+            </div>
+            <div class="front">
+                <img class="img" src="./images/g8.jpg" alt="">
+                <p class="flipp">
+                    Mathematics for Computer Science
+                </p>
+            </div>
+        </div>
+        <div class="flip3D">
+            <div class="back">
+                <img class="img" src="./images/g9.jpg" alt="">
+                <p class="flipp">
+                    Principles of Microeconomics
+                </p>
+            </div>
+            <div class="front">
+                <img class="img" src="./images/g10.jpg" alt="">
+                <p class="flipp">Atmospheric Chemistry</p>
+            </div>
+        </div>
+        <div class="flip3D">
+            <div class="back">
+                <img class="img" src="./images/g11.jpg" alt="">
+                <p class="flipp">
+                    Rocket Propulsion
+
+                </p>
+            </div>
+            <div class="front">
+                <img class="img" src="./images/g12.jpg" alt="">
+                <p class="flipp">
+                    Black Matters: Introduction to Black Studies
+                </p>
+            </div>
+        </div>
+        <div class="flip3D">
+            <div class="back">
+                <img class="img" src="./images/g13.jpg" alt="">
+                <p class="flipp">
+                    Ethics for Engineers: Artificial Intelligence
+                </p>
+            </div>
+            <div class="front">
+                <img class="img" src="./images/g14.jpg" alt="">
+                <p class="flipp"> String Theory for Undergraduates</p>
+            </div>
+        </div>
+        <div class="flip3D">
+            <div class="back">
+                <img class="img" src="./images/g15.jpg" alt="">
+                <p class="flipp">
+                    Principles of Chemical Science
+
+                </p>
+            </div>
+            <div class="front">
+                <img class="img" src="./images/g16.jpg" alt="">
+                <p class="flipp">
+                    Language Variation and Change
+                </p>
+            </div>
+        </div>
+
+        </div>
+
+    </section>
+    <div style="background-color: rgb(199, 209, 240);height: 50px;padding-left: 583px;">
+        <a style="margin-left: 20px;" href="https://facebook.com/OCW-MIT"><img src="./images/sm1.png" alt=""></a>
+        <a style="margin-left: 20px;" href="https://instagram.com/OCW-MIT"><img src="./images/sm2.png" alt=""></a>
+        <a style="margin-left: 20px;" href="https://twitter.com/OCW-MIT"><img src="./images/sm3.png" alt=""></a>
+        <a style="margin-left: 20px;" href="https://youtube.com/OCW-MIT"><img src="./images/sm4.png" alt=""></a>
+        <a style="margin-left: 20px;" aria-label="Open Matters blog on WordPress"
+            href="https://www.ocw-openmatters.org/" style="font-size: 12.208px;"><img src="./images/sm5.png"
+                alt="Click to visit our blog on WordPress."></a>
+    </div>
+    <div class="foot">
+        <a class="foota" href=""><img src="./images/l1.png" alt="">
+        </a>
+        <a class="foota" href=""><img src="./images/l2.png" alt="">
+        </a>
+        <a class="foota" href=""><img src="./images/l3.gif" alt="">
+        </a>
+        <a class="foota" href=""><img src="./images/l3.png" alt=""></a>
+    </div>
+    <p class="copy">
+        © 2001–2021
+        <br>
+        Massachusetts Institute of Technology
+    </p>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
 </body>
+
 </html>
